@@ -121,7 +121,7 @@ public class ServerThread implements Runnable {
     }
 
     public void write(String data){
-        data = data+"\r\n";
+//        data = data+"\r\n";
         try {
             out.write(data.getBytes("utf-8"));
             Log.e(TAG, "---------- write data ok "+data);
