@@ -349,12 +349,29 @@ public class DeviceListFragment extends Fragment {
                 toast("搜索结束");
             } else if (BluetoothDevice.ACTION_FOUND.equals(action)) {
                 BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
-                if (device.getBondState() != BluetoothDevice.BOND_BONDED) {
+                if (isNewDevice(device)) {
                     deviceList.add(device);
                     listAdapter.notifyDataSetChanged();
                     Log.e(TAG, "---------------- " + device.getName());
                 }
             }
         }
+    }
+
+    /**
+     * 判断搜索的设备是新蓝牙设备，且不重复
+     * @param device
+     * @return
+     */
+    private boolean isNewDevice(BluetoothDevice device){
+        boolean repeatFlag = false;
+        for (BluetoothDevice d :
+                deviceList) {
+            if (d.getAddress().equals(device.getAddress())){
+                repeatFlag=true;
+            }
+        }
+        //不是已绑定状态，且列表中不重复
+        return device.getBondState() != BluetoothDevice.BOND_BONDED && !repeatFlag;
     }
 }
