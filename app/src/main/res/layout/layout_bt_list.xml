@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/top_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:text="选择一个设备连接"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:background="@color/orange"/>
+
+    <TextView
+        android:id="@+id/bottom_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_alignParentBottom="true"
+        android:text="右上方搜索,发现更多设备"
+        android:background="@color/orange"
+        android:gravity="center"
+        android:textColor="@android:color/white"/>
+
+    <ListView
+        android:layout_below="@id/top_tv"
+        android:layout_above="@id/bottom_tv"
+        android:id="@+id/device_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
+

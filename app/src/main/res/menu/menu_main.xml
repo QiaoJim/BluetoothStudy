@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
+    <item android:id="@+id/enable_visibility" android:title="设置可见"
+        android:orderInCategory="100" app:showAsAction="never|withText" />
+
+    <item android:id="@+id/discovery" android:title="搜索设备"
+        android:orderInCategory="100" app:showAsAction="never|withText" />
+
+    <!--<item android:id="@+id/bonded_device" android:title="已绑定设备"-->
+        <!--android:orderInCategory="100" app:showAsAction="never|withText" />-->
+
+    <!--<item android:id="@+id/listening" android:title="开启服务器"-->
+        <!--android:orderInCategory="100" app:showAsAction="never|withText" />-->
+
+    <!--<item android:id="@+id/stop_listening" android:title="关闭服务器"-->
+        <!--android:orderInCategory="100" app:showAsAction="never|withText" />-->
+
+    <item android:id="@+id/disconnect" android:title="断开连接"
+        android:orderInCategory="100" app:showAsAction="never|withText" />
+
+</menu>
